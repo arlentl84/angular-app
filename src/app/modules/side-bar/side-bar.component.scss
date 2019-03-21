@@ -1,0 +1,9 @@
+@import "~src/scss/variables";
+.side-bar-section{
+  margin-top: 40px;
+  width: 20%;
+  height: 90%;
+  background: color(bg-green);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 0px 10px 4px rgba(color(bg-secondary), .4);
+}
