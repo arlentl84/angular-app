@@ -1,6 +1,50 @@
 @import "./../../../../scss/variables";
 .obra-list-section{
-  display: flex;
-  flex-direction: column;
-  //background: color(bg-warning);
+  text-align: center;
+
+  .create-obra{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    h3{
+      margin: 10px;
+      color: color(bg-secondary);
+    }
+    button{
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 50%;
+      background:color(bg-green-base);
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  table{
+    width: 100%;
+    background: white;
+    thead {
+      background: color(bg-green-base);
+      color: white;
+      font-size: .9em;
+    }
+    tbody {
+      tr {
+        &:hover {
+          background: white;
+          box-shadow: 0 0 20px 8px rgba(color(bg-green-base), .1);
+        }
+        td {
+          vertical-align: middle;
+          border-bottom: 1px solid rgb(237, 236, 255);
+        }
+      }
+    }
+  }
 }

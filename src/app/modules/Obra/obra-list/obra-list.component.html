@@ -1,7 +1,26 @@
 <div class="obra-list-section">
-  <h2> Lista de Obras</h2>
-
-  <div *ngFor="let item of obras">
-    {{item.nombre}}
+  <div class="create-obra">
+    <h3>Lista de Obras</h3>
+    <button>+</button>
   </div>
+  <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Año de Inicio</th>
+          <th>Año de finalizacion</th>
+          <th>Fecha de Entrega</th>
+        </tr>
+
+      </thead>
+      <tbody>
+          <tr *ngFor="let item of obras">
+            <td>{{item.nombre}}</td>
+            <td>{{item.annoinicio}}</td>
+            <td>{{item.annofin}}</td>
+            <td>{{item.fechaentrega}}</td>
+          </tr>
+      </tbody>
+  </table>
+
 </div>
