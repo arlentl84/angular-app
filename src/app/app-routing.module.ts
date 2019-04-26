@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ObraListComponent} from "./modules/Obra/obra-list/obra-list.component";
+import ObraRoutes from "./modules/Obra/routes.js";
 
-const routes: Routes = [
-  {path:'obras', component:ObraListComponent},
-];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(ObraRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

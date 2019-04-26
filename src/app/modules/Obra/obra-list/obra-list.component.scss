@@ -1,7 +1,10 @@
 @import "./../../../../scss/variables";
 .obra-list-section{
   text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   .create-obra{
     width: 100%;
     display: flex;
@@ -11,6 +14,7 @@
       margin: 10px;
       color: color(bg-secondary);
     }
+
     button{
       width: 40px;
       height: 40px;
@@ -24,27 +28,66 @@
       border: none;
       color: white;
       cursor: pointer;
+      outline: none;
     }
   }
-  table{
+  .table-container{
     width: 100%;
-    background: white;
-    thead {
-      background: color(bg-green-base);
-      color: white;
-      font-size: .9em;
-    }
-    tbody {
-      tr {
-        &:hover {
-          background: white;
-          box-shadow: 0 0 20px 8px rgba(color(bg-green-base), .1);
-        }
-        td {
-          vertical-align: middle;
-          border-bottom: 1px solid rgb(237, 236, 255);
+    flex: 1;
+    overflow-y: auto;
+    transition: all .2s ease-in-out;
+    table{
+      width: 100%;
+      background: white;
+      thead {
+        background: color(bg-green-base);
+        color: white;
+        font-size: .9em;
+      }
+      tbody {
+        tr {
+          height: 25px;
+          &:hover {
+            background: white;
+            box-shadow: 0 0 20px 8px rgba(color(bg-green-base), .1);
+            cursor: pointer;
+          }
+          td {
+            vertical-align: middle;
+            border-bottom: 1px solid rgb(237, 236, 255);
+          }
         }
       }
+    }
+  }
+  .detail-container{
+    height: 0;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    &.expand{
+      height: 300px;
+      border-top: 1px solid color(bg-bg-0d);
+    }
+    & > .top{
+      button{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 50%;
+        background:color(bg-green-base);
+        border: none;
+        color: white;
+        cursor: pointer;
+        outline: none;
+      }
+      display: flex;
+      justify-content: flex-end;
+      margin: 10px 0;
     }
   }
 }
